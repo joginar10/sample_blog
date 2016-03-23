@@ -1,0 +1,10 @@
+<h2>Time:</h2>
+<h3><%= Time.now %></h1>
+
+<% @posts.each do |post|%>
+
+   <h2><%= post.title %></h2>
+   <div><%= truncate(post.body, :length => 8) %></div>
+   <br>
+   <%= link_to "Read Post", post %>
+<% end %>
